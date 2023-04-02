@@ -1,0 +1,33 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block title %}join{% endblock %}
+
+{% block header %}
+<div>
+    <div style="float: left">
+        <img width="43" src="{% static 'img/logo.png' %}">
+    </div>
+    <div>
+        Registrerse aquí
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<form action="" method="POST">{% csrf_token %}
+    {% for field in form %}
+        <p>{{field.label_tag}}
+            <br>
+            {{field}}
+            {% for error in field.errors %} 
+                {{error}}
+            {% endfor %} 
+        </p>
+    {% endfor %} 
+    <p><input type="submit" value="join"></p>
+</form>
+
+{% endblock %}

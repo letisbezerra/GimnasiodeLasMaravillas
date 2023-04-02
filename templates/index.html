@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block title %} index {% endblock %}
+
+{% block header %}
+<div>
+    <div style="float: left">
+        <img width="43" src="{% static 'img/logo.png' %}">
+    </div>
+    <div>
+        El Gimnasio de las Maravillas
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<p>El Gimnasio para vos, mujer maravillosa</p>
+<img height="600" src="{% static 'img/woman.jpg' %}">
+
+{% endblock %}

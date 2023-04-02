@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block title %}500{% endblock %}
+
+{% block header %}
+<div>
+    <div style="float: left">
+        <img width="43" src="{% static 'img/logo.png' %}">
+    </div>
+    <div>
+        Error 500
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<p>Internal server error</p>
+<img width="250" src="{% static 'img/500.png' %}" alt="">
+
+{% endblock %} 

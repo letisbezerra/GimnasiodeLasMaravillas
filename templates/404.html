@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block title %}404{% endblock %}
+
+{% block header %}
+<div>
+    <div style="float: left">
+        <img width="43" src="{% static 'img/logo.png' %}">
+    </div>
+    <div>
+        Error 404
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<p>Error 404, page not founded</p>
+<img width="250" src="{% static 'img/404.jpg' %}" alt="">
+
+{% endblock %} 

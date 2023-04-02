@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block title %}No existes{% endblock %}
+
+{% block header %}
+<div>
+    <div style="float: left">
+        <img width="43" src="{% static 'img/logo.png' %}">
+    </div>
+    <div>
+        Todavía no estas registrada
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<p>El usuario no esta registrado, registrase para enter</p>
+
+{% endblock %}

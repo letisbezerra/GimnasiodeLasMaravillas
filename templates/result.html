@@ -1,0 +1,32 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block title %}Resultados{% endblock %}
+
+{% block header %}
+<div>
+    <div style="float: left">
+        <img width="43" src="{% static 'img/logo.png' %}">
+    </div>
+    <div>
+        Resultados de la búsqueda
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{% if activities %} 
+    {% for activity in activities %} 
+        <p>Activity: {{activity.type}}</p>
+        <p>Instructor: {{activity.instructor.name}} {{activity.instructor.lastname}}</p>
+        <p>Hora: {{activity.time}}</p>
+        <img width="200" src="{{activity.picture.url}}" alt=""> 
+    {% endfor %} 
+{% else %}
+    <p>Su búsqueda no arroja resultados</p>
+
+{% endif %}
+
+{% endblock %}

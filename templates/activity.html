@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block title %}activities{% endblock %}
+
+{% block header %}
+<div>
+    <div style="float: left">
+        <img width="43" src="{% static 'img/logo.png' %}">
+    </div>
+    <div>
+        Las Maravillas
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<h3>
+Aqui llevamos el entreinamneto en serio!
+Conozca a nuestras activities</h3>
+    <div>
+        <ul style="list-style-type: none; ">
+            {% for activity in activities %}
+                <li style="color: #0479b3; font-size: large">
+                    <a><strong><em>{{activity.type}}</em></strong></a><br>
+                    <a>Instructor: {{activity.instructor.name}}</a><br>
+                    <a>Precio: U${{activity.price}}</a><br>
+                    <a>Hora: {{activity.time}}</a><br>
+                    <img width="200" src="{{activity.picture.url}}" alt=""> 
+                </li> <br>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

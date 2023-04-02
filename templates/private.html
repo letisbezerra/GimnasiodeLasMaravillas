@@ -1,0 +1,24 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block title %}
+Bienvenida Mujer Maravilla
+{% endblock %}
+
+{% block header %}
+<div>
+    <div style="float: left">
+        <img width="43" src="{% static 'img/logo.png' %}">
+    </div>
+    <div>
+        Ingresaste al sistema de las mujeres Maravillas
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<p>Bienvenida {{user.username|title}}</p>
+
+{% endblock %} 
